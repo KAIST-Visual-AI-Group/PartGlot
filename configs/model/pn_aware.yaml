@@ -1,0 +1,9 @@
+defaults:
+    - pn_agnostic.yaml
+
+_target_: partglot.models.pn_aware.PNAware
+
+xnt_reg: true
+xnt_reg_weights: 1e-2
+
+model_name: pn_aware

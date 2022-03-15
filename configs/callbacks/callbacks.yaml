@@ -1,0 +1,18 @@
+model_summary:
+    _target_: pytorch_lightning.callbacks.RichModelSummary
+    max_depth: 1
+
+rich_progress_bar:
+    _target_: pytorch_lightning.callbacks.RichProgressBar
+
+model_checkpoint:
+    _target_: pytorch_lightning.callbacks.ModelCheckpoint
+    monitor: "val/acc"
+    mode: "max"
+    save_top_k: 3
+    save_last: true
+    verbose: true
+    dirpath: "checkpoints/"
+    filename: "epoch={epoch:02d}-val_acc={val/acc:.1f}"
+    auto_insert_metric_name: false
+

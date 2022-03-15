@@ -1,0 +1,11 @@
+_target_: partglot.datamodules.partglot_datamodule.PartglotDataModule
+
+only_correct: true
+only_easy_context: false
+max_seq_len: 33
+only_one_part_name: true
+seed: ${seed}
+split_sizes: [0.8, 0.1, 0.1]
+balance: true
+data_dir: ${data_dir}
+batch_size: ${batch_size}

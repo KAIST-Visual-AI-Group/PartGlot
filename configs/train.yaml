@@ -1,0 +1,27 @@
+# @package _global_
+#
+hydra:
+    run:
+        dir: logs/runs/${model.model_name}/${now:%m-%d}_${now:%H-%M-%S}
+
+defaults:
+    - _self_
+    - datamodule: datamodule.yaml
+    - model: pn_agnostic.yaml
+    - logger: null
+    - callbacks: callbacks.yaml
+    - override hydra/job_logging: disabled
+
+trainer:
+    _target_: pytorch_lightning.Trainer
+    gpus: [0]
+    max_epochs: ${epochs}
+
+epochs: 30
+batch_size: 64
+
+work_dir: ${hydra:runtime.cwd}
+data_dir: ${work_dir}/data
+
+seed: null
+name: null

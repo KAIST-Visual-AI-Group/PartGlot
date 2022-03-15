@@ -1,0 +1,13 @@
+_target_: partglot.models.pn_agnostic.PNAgnostic
+
+text_dim: 64
+embedding_dim: 100
+sup_segs_dim: 64
+
+lr: 1e-3
+data_dir: ${data_dir}
+
+measure_iou_every_epoch: true
+save_pred_label_every_epoch: false
+
+model_name: pn_agnostic

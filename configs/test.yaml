@@ -1,0 +1,23 @@
+hydra:
+    run:
+        dir: ${save_dir}/${now:%m-%d}_${now:%H-%M-%S}
+
+defaults:
+    - _self_
+    - datamodule: datamodule.yaml
+    - model: pn_agnostic.yaml
+    - override hydra/job_logging: disabled
+
+trainer:
+    _target_: pytorch_lightning.Trainer
+    gpus: [0]
+    logger: false
+
+
+ckpt_path: checkpoints/pn_agnostic.ckpt
+save_dir: logs/pre_trained/${model.model_name}
+
+work_dir: ${hydra:runtime.cwd}
+data_dir: ${work_dir}/data
+seed: null
+batch_size: 64
