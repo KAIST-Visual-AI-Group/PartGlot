@@ -8,7 +8,7 @@ This repo is a pytorch-lightning implementation of CVPR2022 paper [PartGlot](htt
 PartGlot introduces a novel way _to segment 3D parts from solely part referential language._
 We reflect the human perception mechanism that the human attends to specific regions on objects when given information about that region. To exploit this fact, we train a neural listener on reference games, where the model has to differentiate a target shape among two distractors based on utterances describing the target.
 We investigate how well the model can connect part names in the utterances to specific regions in the geometry of the 3D shapes _by just solving classification tasks._  
-We achieved __79.4% instance mIoU__ on ShapeNet Chair class __without any direct geometric supervision and fine-grained annotations__.
+We achieved __79.4% instance mIoU__ on ShapeNet Chair class *__without any direct geometric supervision and fine-grained annotations*__.
 Furthermore, we deomonstrate that the part information learned from language can be generalizable to Out-of-Distribution shape classes as well.
 For instance, Table _top_ is highly considered as Chair _seat_ with __78.2% mIoU__ and Lamp _base_ as Chair _leg_ with __44.6% mIoU__.
 
