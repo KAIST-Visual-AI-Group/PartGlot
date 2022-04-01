@@ -3,7 +3,7 @@
 ![teaser](./docs/images/teaser.png)
 
 ## Introduction
-This repo is a pytorch-lightning implementation of CVPR2022 paper [PartGlot](https://arxiv.org/abs/2112.06390). 
+This repo is a pytorch-lightning implementation of **CVPR2022 paper (Oral)** [PartGlot](https://arxiv.org/abs/2112.06390). 
 
 PartGlot introduces a novel way _to segment 3D parts from solely part referential language._
 We reflect the human perception mechanism that the human attends to specific regions on objects when given information about that region. To exploit this fact, we train a neural listener on reference games, where the model has to differentiate a target shape among two distractors based on utterances describing the target.
