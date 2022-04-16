@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background: #fff;
+                font-size: 15px;
+                -webkit-font-smoothing: antialiased;
+                -webkit-font-smoothing: auto;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            img {
+                padding: 0;
+                display: block;
+                margin: 0 auto;
+                max-height: 960px;
+                max-width: 100%;
+                image-rendering: auto;
+                image-rendering: crisp-edges;
+                image-rendering: pixelated;
+
+                /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+                image-rendering: -webkit-optimize-contrast;
+            }
+
+            table {
+                width: 100%;
+                max-width: 960px;
+                table-layout: fixed;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            thead { 
+                border-bottom: 1px solid #000;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>Input<br>(Super-Seg.)</td>
+                        <td>Back</td>
+                        <td>Seat</td>
+                        <td>Leg</td>
+                        <td>Arm</td>
+                        <td><b>Output</b></td>
+                        <td>Ground Truth</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <script type="text/javascript" charset="utf-8">
+            function getRandomSamples(arr, size) {
+                var shuffled = arr.slice(0), i = arr.length, temp, index;
+                while (i--) {
+                    index = Math.floor((i + 1) * Math.random());
+                    temp = shuffled[index];
+                    shuffled[index] = shuffled[i];
+                    shuffled[i] = temp;
+                }
+                return shuffled.slice(0, size);
+            }
+
+            function renderDataInTheTable(arr) {
+                const table = document.getElementById("table");
+                arr.forEach(item => {
+                    let row = document.createElement("tr");
+                    let cell = document.createElement("td");
+                    cell.innerHTML = "<img src='images/segmentation_results/chair_" +  String(item + 1).padStart(2, '0') + ".png'>";
+                    row.appendChild(cell);
+                    table.appendChild(row);
+                });
+            }
+
+            const indices = [...Array(38).keys()];
+            const sampled_indices = getRandomSamples(indices, 5);
+            renderDataInTheTable(sampled_indices);
+        </script>
+
+    </body>
+</html>
