@@ -59,7 +59,7 @@ You can control hyper-parameters related to a cross-entropy regularization by ch
 ## Citation
 If you find our work useful, please consider citing our paper:
 ```
-@article{koo2022partglot,
+@inproceedings{koo2022partglot,
     title={PartGlot: Learning Shape Part Segmentation from Language Reference Games},
     author={
         Koo, Juil and
@@ -68,7 +68,7 @@ If you find our work useful, please consider citing our paper:
         Guibas, Leonidas J and
         Sung, Minhyuk
     },
-    journal={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    booktitle={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
     year={2022}
 }
 ```
