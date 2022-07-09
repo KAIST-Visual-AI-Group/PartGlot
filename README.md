@@ -2,6 +2,11 @@
 
 ![teaser](./docs/images/teaser.png)
 
+| "rectangle _back_" | "thin _seat_" | "two _legs_" | "opening _arms_" |
+| ---- | ---- | ---- | --- |
+| ![back_example](./docs/images/back.gif) | ![seat_example](./docs/images/seat.gif) | ![leg_example](./docs/images/leg.gif) | ![arm_example](./docs/images/arm.gif)
+
+
 ## Introduction
 This repo is a pytorch-lightning implementation of **CVPR2022 paper (Oral)** [PartGlot](https://arxiv.org/abs/2112.06390). 
 
@@ -11,6 +16,16 @@ We investigate how well the model can connect part names in the utterances to sp
 We achieved __79.4% instance mIoU__ on ShapeNet Chair class __*without any direct geometric supervision and fine-grained annotations*__.
 Furthermore, we deomonstrate that the part information learned from language can be generalizable to Out-of-Distribution shape classes as well.
 For instance, Table _top_ is highly considered as Chair _seat_ with __78.2% mIoU__ and Lamp _base_ as Chair _leg_ with __44.6% mIoU__.
+
+
+## Quantitative Results
+
+IoU(%)s on ShapeNet Chair dataset:
+
+| Method | Back | Seat | Leg  | Arm  | Average  |
+| -----  | ---  | ---  | ---- | ---- | ---- |
+| Part-Name-Agnostic | 82.2 | 78.8 | 75.5 | 40.6 | 69.3 |
+| Part-Name-Aware | 84.9 | 83.6 | 78.9 | 70.4 | 79.4 |
 
 ## Get Started
 ### Dependencies
