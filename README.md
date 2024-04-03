@@ -37,7 +37,8 @@ cd PartGlot
 pip install -e .
 ```
 ### Data and pre-trained weights
-We provide ready-to-use data and pre-trained weights [here](https://drive.google.com/drive/folders/1jvPclGP5Dg0653wrMvN8WX9am7txZJu8). Download data and put them in `data` directory. 
+We provide ready-to-use data and pre-trained weights [here](https://1drv.ms/f/s!AtxL_EOxFeYMk3vXludZhe4t4uwM?e=ELOxII). Download data and put them in `data` directory. 
+
 
 ## Test 
 To test pre-trained PartGlots, download checkpoints from the link above and pass a path of the checkpoint:
