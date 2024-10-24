@@ -13,13 +13,15 @@ setup(
         "torch",
         "h5py",
         "Pillow",
-        "numpy",
+        "numpy<2",
         "matplotlib",
         "six",
         "nltk",
         "pytorch-lightning==1.5.5",
         "hydra-core==1.1.0",
-        "omegaconf==2.1.1"
+        "omegaconf==2.1.1",
+        "rich",
+        "pickle",
     ],
     zip_safe=False,
 )
