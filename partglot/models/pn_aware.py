@@ -27,7 +27,7 @@ class PNAware(PNAgnostic):
         )
         self.mlp = MLP(input_dim=self.hparams.text_dim * 2)
 
-    def forward(self, segs, segs_mask, text, part_indicator, return_only_attn=False):
+    def forward(self, segs, segs_mask, text, part_indicator, return_only_attn=False, double_softmax=True):
         """
         Input:
             segs: [B,K,n_segs,n_points,3]
@@ -49,7 +49,7 @@ class PNAware(PNAgnostic):
             part_indicator = part_indicator.repeat_interleave(K, dim=0)
 
         cross_attn_f, cross_attn_weights, attn_along_pn = self.cross_attention(
-            attn_enc_f, segs_f, segs_mask, part_indicator, double_softmax=True,
+            attn_enc_f, segs_f, segs_mask, part_indicator, double_softmax=double_softmax,
             return_only_attn=return_only_attn
         )
         cross_attn_weights = cross_attn_weights.reshape(B, K, attn_enc_f.shape[1], n_segs)
