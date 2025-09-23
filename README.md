@@ -37,7 +37,7 @@ cd PartGlot
 pip install -e .
 ```
 ### Data and pre-trained weights
-We provide ready-to-use data and pre-trained weights [here](https://1drv.ms/f/s!AtxL_EOxFeYMk3vXludZhe4t4uwM?e=ELOxII). Download data and put them in `data` directory. 
+We provide ready-to-use data and pre-trained weights [here](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy8wY2U2MTViMTQzZmM0YmRjL1F0eExfRU94RmVZZ2dBejdDUUFBQUFBQTE1Ym5XWVh1TGVMc0RB&id=0CE615B143FC4BDC%212555&cid=0CE615B143FC4BDC). Download data and put them in `data` directory. 
 
 
 ## Test 
